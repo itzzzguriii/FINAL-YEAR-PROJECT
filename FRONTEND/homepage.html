@@ -4,63 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electric Vehicle Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        #project-intro {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .slideshow-container {
-            max-width: 600px;
-            margin: 20px auto;
-            position: relative;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            font-size: 18px;
-            font-weight: bold;
-            color: #555;
-            padding: 16px;
-            margin-top: -20px;
-            cursor: pointer;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -76,15 +20,15 @@
 
     <div class="slideshow-container">
         <div class="mySlides">
-            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.motortrend.com%2Fnews%2F2024-tesla-cybertruck-first-look-review%2F&psig=AOvVaw1u2ayFtIE382WKju5zlhG-&ust=1701960743325000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPDO8YOI-4IDFQAAAAAdAAAAABBY"><img src="image2.jpeg" alt="Image 1"></a>
+            <a href="your_link1.html"><img src="image1.jpg" alt="Image 1"></a>
         </div>
 
         <div class="mySlides">
-            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arnoldclark.com%2Fnearly-new-cars%2Fmercedes-benz%2Feqc%2Feqc-400-300kw-amg-line-premium-plus-80kwh-5dr-auto%2F2023%2Fref%2Fcc_gknuyp2dw3ux1j1o&psig=AOvVaw2_fvLsqLXTbFLItgHyYD5H&ust=1701960857566000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiihbmI-4IDFQAAAAAdAAAAABAk"><img src="image3.jpeg" alt="Image 2"></a>
+            <a href="your_link2.html"><img src="image2.jpg" alt="Image 2"></a>
         </div>
 
         <div class="mySlides">
-            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPorsche_Taycan&psig=AOvVaw39Yd2xE1t6t_X8_SsYG4pV&ust=1701960974447000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCWlu2I-4IDFQAAAAAdAAAAABAD"><img src="image1.jpeg" alt="Image 3"></a>
+            <a href="your_link3.html"><img src="image3.jpg" alt="Image 3"></a>
         </div>
 
         <!-- Add more slides as needed -->
@@ -93,26 +37,7 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change slide every 3 seconds
-        }
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
