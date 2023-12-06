@@ -17,10 +17,6 @@
             color: #333;
         }
 
-        p {
-            color: #555;
-        }
-
         #project-intro {
             max-width: 600px;
             margin: 0 auto;
@@ -28,6 +24,41 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-container {
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            padding: 16px;
+            margin-top: -20px;
+            cursor: pointer;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
@@ -42,6 +73,46 @@
             Navigate through our pages to discover the impact of machine learning on EV battery efficiency, interact with predictive maintenance tools, and learn about cybersecurity threats and their solutions in the automotive industry.
         </p>
     </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <a href="your_link1.html"><img src="image1.jpg" alt="Image 1"></a>
+        </div>
+
+        <div class="mySlides">
+            <a href="your_link2.html"><img src="image2.jpg" alt="Image 2"></a>
+        </div>
+
+        <div class="mySlides">
+            <a href="your_link3.html"><img src="image3.jpg" alt="Image 3"></a>
+        </div>
+
+        <!-- Add more slides as needed -->
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
 
 </body>
 </html>
