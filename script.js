@@ -17,3 +17,28 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
+const responses = {
+    "maintenance": "Sure, I can help you with maintenance. What specific question do you have?",
+    "battery": "For battery maintenance, it's recommended to...",
+    "tire": "To maintain your tires, make sure to...",
+    // Add more responses as needed
+};
+
+function askQuestion() {
+    const userInput = document.getElementById("userInput").value;
+    const chatBox = document.getElementById("chatBox");
+
+    // Display user question
+    chatBox.innerHTML += `<p>User: ${userInput}</p>`;
+
+    // Check if there's a predefined response
+    const response = responses[userInput.toLowerCase()];
+    if (response) {
+        chatBox.innerHTML += `<p>Chatbot: ${response}</p>`;
+    } else {
+        chatBox.innerHTML += `<p>Chatbot: I'm sorry, I don't understand that question.</p>`;
+    }
+
+    // Clear user input
+    document.getElementById("userInput").value = "";
+}
