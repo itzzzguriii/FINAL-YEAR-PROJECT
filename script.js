@@ -21,11 +21,11 @@ function selectOption(option) {
     var chatHistory = document.getElementById('chat-history');
 
     // Display user-selected option in the chat history
-    chatHistory.innerHTML += '<strong>User:</strong> Selected ' + option + '<br>';
+    chatHistory.innerHTML += '<strong>User:</strong> ' + option + '<br>';
 
     // Provide a response based on the selected option
     switch (option.toLowerCase()) {
-        case 'option 1':
+        case 'How do i save battery?':
             chatHistory.innerHTML += '<strong>Chatbot:</strong> Smooth Driving, Regenerative Braking, Maintain a Moderate Speed <br>';
             break;
         case 'option 2':
