@@ -17,26 +17,26 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-function askQuestion() {
-    var userQuestion = document.getElementById('user-input').value;
+function selectOption(option) {
     var chatHistory = document.getElementById('chat-history');
 
-    // Display user question in the chat history
-    chatHistory.innerHTML += '<strong>User:</strong> ' + userQuestion + '<br>';
+    // Display user-selected option in the chat history
+    chatHistory.innerHTML += '<strong>User:</strong> Selected ' + option + '<br>';
 
-    // Check for predefined questions and provide responses
-    switch (userQuestion.toLowerCase()) {
-        case 'How can I save battery?':
-            chatHistory.innerHTML += '<strong>Chatbot:</strong> To save you battery: Avoid rapid acceleration and heavy breaking, park in shaded areas to prevent ur battery from overhaeating !<br>';
+    // Provide a response based on the selected option
+    switch (option.toLowerCase()) {
+        case 'option 1':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> You chose Option 1. Great choice!<br>';
             break;
-        case 'how does this work?':
-            chatHistory.innerHTML += '<strong>Chatbot:</strong> You can ask questions, and I will provide predefined responses.<br>';
+        case 'option 2':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> Option 2 is a good pick!<br>';
             break;
-        // Add more predefined questions and responses as needed
+        case 'option 3':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> Option 3 is fantastic!<br>';
+            break;
+        // Add more options and responses as needed
         default:
-            chatHistory.innerHTML += '<strong>Chatbot:</strong> I\'m sorry, I don\'t understand that question.<br>';
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> I\'m sorry, I don\'t understand that option.<br>';
     }
-
-    // Clear the user input
-    document.getElementById('user-input').value = '';
 }
+
