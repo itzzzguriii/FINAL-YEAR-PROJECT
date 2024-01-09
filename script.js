@@ -17,28 +17,26 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-const responses = {
-    "maintenance": "Sure, I can help you with maintenance. What specific question do you have?",
-    "battery": "For battery maintenance, it's recommended to...",
-    "tire": "To maintain your tires, make sure to...",
-    // Add more responses as needed
-};
-
 function askQuestion() {
-    const userInput = document.getElementById("userInput").value;
-    const chatBox = document.getElementById("chatBox");
+    var userQuestion = document.getElementById('user-input').value;
+    var chatHistory = document.getElementById('chat-history');
 
-    // Display user question
-    chatBox.innerHTML += `<p>User: ${userInput}</p>`;
+    // Display user question in the chat history
+    chatHistory.innerHTML += '<strong>User:</strong> ' + userQuestion + '<br>';
 
-    // Check if there's a predefined response
-    const response = responses[userInput.toLowerCase()];
-    if (response) {
-        chatBox.innerHTML += `<p>Chatbot: ${response}</p>`;
-    } else {
-        chatBox.innerHTML += `<p>Chatbot: I'm sorry, I don't understand that question.</p>`;
+    // Check for predefined questions and provide responses
+    switch (userQuestion.toLowerCase()) {
+        case 'what is your name?':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> !<br>';
+            break;
+        case 'how does this work?':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> You can ask questions, and I will provide predefined responses.<br>';
+            break;
+        // Add more predefined questions and responses as needed
+        default:
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> I\'m sorry, I don\'t understand that question.<br>';
     }
 
-    // Clear user input
-    document.getElementById("userInput").value = "";
+    // Clear the user input
+    document.getElementById('user-input').value = '';
 }
