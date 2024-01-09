@@ -26,8 +26,8 @@ function askQuestion() {
 
     // Check for predefined questions and provide responses
     switch (userQuestion.toLowerCase()) {
-        case 'what is your name?':
-            chatHistory.innerHTML += '<strong>Chatbot:</strong> !<br>';
+        case 'How can I save battery?':
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> To save you battery: Avoid rapid acceleration and heavy breaking, park in shaded areas to prevent ur battery from overhaeating !<br>';
             break;
         case 'how does this work?':
             chatHistory.innerHTML += '<strong>Chatbot:</strong> You can ask questions, and I will provide predefined responses.<br>';
