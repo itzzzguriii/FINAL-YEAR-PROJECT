@@ -35,7 +35,7 @@ function selectOption(option) {
             chatHistory.innerHTML += '<strong>Chatbot:</strong> Option 3 is fantastic!<br>';
             break;
         // Add more options and responses as needed
-        default:
+        case'':
             chatHistory.innerHTML += '<strong>Chatbot:</strong> I\'m sorry, I don\'t understand that option.<br>';
     }
 }
