@@ -26,7 +26,7 @@ function selectOption(option) {
     // Provide a response based on the selected option
     switch (option.toLowerCase()) {
         case 'option 1':
-            chatHistory.innerHTML += '<strong>Chatbot:</strong> You chose Option 1. Great choice!<br>';
+            chatHistory.innerHTML += '<strong>Chatbot:</strong> Smooth Driving, Regenerative Braking, Maintain a Moderate Speed <br>';
             break;
         case 'option 2':
             chatHistory.innerHTML += '<strong>Chatbot:</strong> Option 2 is a good pick!<br>';
