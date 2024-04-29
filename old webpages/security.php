@@ -9,5 +9,6 @@ if(!isset($_SESSION['UserId']) || empty($_SESSION['UserId'])){
 <?php include('include/head.php'); ?>
 <body class="normalBody" onload="setActive('nav_security')">
     <?php include('include/navbar.php'); ?>
+    <script src="js/script.js"></script>
 </body>
 </html>

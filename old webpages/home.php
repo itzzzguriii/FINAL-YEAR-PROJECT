@@ -7,7 +7,8 @@ if(!isset($_SESSION['UserId']) || empty($_SESSION['UserId'])){
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <?php include('include/head.php'); ?>
-<body class="normalBody" onload="setActive('nav_security')">
+<body class="normalBody" onload="setActive('nav_home')">
     <?php include('include/navbar.php'); ?>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -31,8 +31,7 @@ if(isset($_SESSION['UserId']) && !empty($_SESSION['UserId'])){
                         <div class="button input-box">
                             <input type="submit" value="Login" onclick="login()">
                         </div>
-                        <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                        <div class="text sign-up-text"><a href="admin/"><label>Admin panel</label></a></div>
+                        <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
                     </div>
                 </div>
                 <div class="signup-form">
@@ -59,5 +58,6 @@ if(isset($_SESSION['UserId']) && !empty($_SESSION['UserId'])){
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
